@@ -2,15 +2,10 @@ extends layout
 
 block content
   video#video(autoplay playsinline)
-  div#canvas_area
-    canvas#select_area
-    canvas#drowing
-  button#shutter
-    | Take photo
+  div#select_square
+  canvas#select_area
+    | This browser does not support the HTML5 Canvas element.
 
-  script
-    | var display  = document.getElementById("select_area");
-    | var drowing  = document.getElementById("drowing");
-    | var instance = new app(display, drowing);
+
   script(src="/javascripts/ocr.js")
   script(src="/javascripts/selecter.js")
