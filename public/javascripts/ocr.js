@@ -1,5 +1,5 @@
-function convert_text() {
-    const url = document.getElementById( "select_area" ).toDataURL("image/png");
+function convert_text(url) {
+    console.log(url);
     Tesseract
         .recognize(url, {
             lang: 'jpn'

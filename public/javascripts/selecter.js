@@ -3,16 +3,22 @@ let square = document.getElementById('select_square');
 
 let dragging = false;
 
-var start_pos = [0,0];
+let start_pos = [0,0];
 
-//
+// 選択位置格納変数
+let x_point = 0;
+let y_point = 0;
+let width = 0;
+let height = 0;
+
+let video = document.getElementById("video"),
+    canvas = document.getElementById("video_copy"),
+    ctx = canvas.getContext("2d");
+requestAnimationFrame(draw);
+
 function draw(pos) {
     if (dragging) {
         // 計算
-        let x_point = 0;
-        let y_point = 0;
-        let width = 0;
-        let height = 0;
 
         if(start_pos[0] < pos[0]){
             x_point = start_pos[0];
@@ -67,7 +73,13 @@ target.addEventListener('mousedown', function(e) {
 target.addEventListener('mouseup', function(e) {
     dragging = false;
     console.log("マウスアップ" + pos(e));
-    convert_text();
+
+    // 画像生成用のキャンバスへ転写
+    ctx.drawImage(video, x_point, y_point, width, height,
+        0, 0, width, height);
+    // 画像生成
+    let imgData = canvas.toDataURL("image/png");
+    convert_text(imgData);
 });
 
 // マウス移動
