@@ -1,10 +1,9 @@
 extends layout
 
 block content
-  video#camera autoplay playinline
+  video#video autoplay playinline
     | Video stream not available.
   button#shutter
     | Take photo
-  canvas#picture
 
   script(src="/javascripts/ocr.js")
