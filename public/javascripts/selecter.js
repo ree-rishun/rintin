@@ -71,7 +71,6 @@ target.addEventListener('mouseup', function(e) {
 
 // マウス移動
 target.addEventListener('mousemove', function(e) {
-    event.preventDefault();
     if(dragging){
         //console.log("マウス移動中" + pos(e));
         draw(pos(e));
@@ -82,6 +81,7 @@ target.addEventListener('mousemove', function(e) {
 // スマホ版
 // マウスダウン
 target.addEventListener('touchstart', function(e) {
+    e.preventDefault();
     square.style.display = "inline-block";
     dragging = true;
     start_pos = pos(e);
