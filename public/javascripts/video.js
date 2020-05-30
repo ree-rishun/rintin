@@ -25,9 +25,6 @@ function errorCallback(err) {
 
 function successCallback(stream) {
     video.srcObject = stream;
-    console.log("stream :" + stream);
-    console.log("video :" + video.width);
-    console.log("video :" + video.height);
 };
 
 function errorCallback2(err) {

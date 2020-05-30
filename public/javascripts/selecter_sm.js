@@ -50,6 +50,7 @@ function pos_sm(e) {
 // スマホ版
 // マウスダウン
 target.addEventListener('touchstart', function(e) {
+    print.innerHTML ="";
     e.preventDefault();
     square.style.display = "inline-block";
     dragging = true;
@@ -67,7 +68,6 @@ target.addEventListener('touchmove', function(e) {
     if(dragging){
         draw(pos_sm(e));
     }
-    convert_text();
 });
 
 

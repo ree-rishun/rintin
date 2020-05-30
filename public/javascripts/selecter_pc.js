@@ -16,24 +16,21 @@ function pos(e) {
 // PC版
 // マウスダウン
 target.addEventListener('mousedown', function(e) {
+    print.innerHTML ="";
     square.style.display = "inline-block";
     dragging = true;
     start_pos = pos(e);
-    console.log("start_pos: " + start_pos);
 });
 
 // マウスアップ
 target.addEventListener('mouseup', function(e) {
     dragging = false;
-    console.log("マウスアップ" + pos(e));
-
     get_image(ctx,video, x_point, y_point, width, height)
 });
 
 // マウス移動
 target.addEventListener('mousemove', function(e) {
     if(dragging){
-        //console.log("マウス移動中" + pos(e));
         draw(pos(e));
     }
 });

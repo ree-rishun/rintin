@@ -1,3 +1,5 @@
+let print = document.getElementById( "select_square" );
+
 function convert_text(url) {
     console.log(url);
     Tesseract
@@ -6,7 +8,6 @@ function convert_text(url) {
         })
         .then(function(result) {
             console.log(result);
-            let print = document.getElementById( "select_square" );
             print.innerHTML = result.text;
         });
 }
