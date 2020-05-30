@@ -6,7 +6,7 @@ function convert_text(url) {
         })
         .then(function(result) {
             console.log(result);
-            let msg = document.getElementById( "select_square" );
-            msg.innerHTML = result.text;
+            let print = document.getElementById( "select_square" );
+            print.innerHTML = result.text;
         });
 }

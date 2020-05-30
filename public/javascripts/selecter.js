@@ -1,4 +1,4 @@
-let target = document.getElementById( "select_area" );
+let target = document.getElementById('select_area');
 let square = document.getElementById('select_square');
 
 let dragging = false;
@@ -11,8 +11,7 @@ let y_point = 0;
 let width = 0;
 let height = 0;
 
-let video = document.getElementById("video"),
-    canvas = document.getElementById("video_copy"),
+var canvas = document.getElementById("video_copy"),
     ctx = canvas.getContext("2d");
 requestAnimationFrame(draw);
 
