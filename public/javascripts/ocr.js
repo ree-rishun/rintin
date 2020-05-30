@@ -1,5 +1,3 @@
-var Tesseract = require('tesseract.js');
-
 function convert_text() {
     const url = document.getElementById( "select_area" ).toDataURL("image/png");
     Tesseract
