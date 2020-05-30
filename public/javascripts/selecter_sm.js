@@ -18,6 +18,7 @@ target.addEventListener('touchstart', function(e) {
 // マウスアップ
 target.addEventListener('touchend', function(e) {
     dragging = false;
+    get_image(ctx,video, x_point, y_point, width, height);
 });
 
 // マウス移動
