@@ -1,5 +1,5 @@
 let target = document.getElementById( "select_area" );
-let ctx = target.getContext( "2d" ) ;
+let square = document.getElementById('select_square');
 
 let dragging = false;
 
@@ -40,7 +40,6 @@ function draw(pos) {
 }
 
 function draw_square(x,y,width,height){
-    let square = document.getElementById('select_square');
     square.style.width = width + 'px';
     square.style.height = height + 'px';
     square.style.top = y + 'px';
@@ -55,13 +54,10 @@ function pos(e) {
     return [x, y];
 }
 
-let message;
-ctx.strokeStyle = "blue";
-ctx.lineWidth = 1;
-
 // PC版
 // マウスダウン
 target.addEventListener('mousedown', function(e) {
+    square.style.display = "inline-block";
     dragging = true;
     start_pos = pos(e);
     console.log("start_pos: " + start_pos);
@@ -75,6 +71,7 @@ target.addEventListener('mouseup', function(e) {
 
 // マウス移動
 target.addEventListener('mousemove', function(e) {
+    event.preventDefault();
     if(dragging){
         //console.log("マウス移動中" + pos(e));
         draw(pos(e));
@@ -85,6 +82,7 @@ target.addEventListener('mousemove', function(e) {
 // スマホ版
 // マウスダウン
 target.addEventListener('touchstart', function(e) {
+    square.style.display = "inline-block";
     dragging = true;
     start_pos = pos(e);
     console.log("start_pos: " + start_pos);
