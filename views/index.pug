@@ -1,14 +1,18 @@
 extends layout
 
 block content
+  nav
   video#video(autoplay playsinline)
   canvas#video_copy
   div#select_square
   canvas#select_area
     | This browser does not support the HTML5 Canvas element.
 
+  // scripts
   script(src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.7/dist/tesseract.js")
+  script(src="https://cdn.jsdelivr.net/npm/jsqr@latest/dist/jsQR.min.js")
   script(src="/javascripts/video.js")
+  script(src="/javascripts/qrcode_read.js")
   script(src="/javascripts/selecter_sm.js")
   script(src="/javascripts/selecter_pc.js")
   script(src="/javascripts/selecter.js")

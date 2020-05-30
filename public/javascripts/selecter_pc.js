@@ -16,6 +16,7 @@ function pos(e) {
 // PC版
 // マウスダウン
 target.addEventListener('mousedown', function(e) {
+    clearInterval(repeat);
     print.innerHTML ="";
     square.style.display = "inline-block";
     dragging = true;
@@ -25,7 +26,7 @@ target.addEventListener('mousedown', function(e) {
 // マウスアップ
 target.addEventListener('mouseup', function(e) {
     dragging = false;
-    get_image(ctx,video, x_point, y_point, width, height)
+    get_image(ctx,video, x_point, y_point, width, height);
 });
 
 // マウス移動

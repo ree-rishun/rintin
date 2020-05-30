@@ -1,0 +1,38 @@
+#editer {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 11%;
+  width: 87%;
+  min-height: 100vh;
+  background: none;
+  border: none;
+  resize: none;
+  color: white;
+  font-size: 1.2em;
+  line-height: 1.9em;
+}
+
+#editer:focus {
+  outline: none;
+}
+
+nav {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 10%;
+  height: 100vh;
+  background-color: #666666;
+}
+
+#qrcode {
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/*# sourceMappingURL=editer.css.map */

@@ -50,6 +50,7 @@ function pos_sm(e) {
 // スマホ版
 // マウスダウン
 target.addEventListener('touchstart', function(e) {
+    clearInterval(repeat);
     print.innerHTML ="";
     e.preventDefault();
     square.style.display = "inline-block";
