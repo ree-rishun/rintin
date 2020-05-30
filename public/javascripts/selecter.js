@@ -67,6 +67,7 @@ target.addEventListener('mousedown', function(e) {
 target.addEventListener('mouseup', function(e) {
     dragging = false;
     console.log("マウスアップ" + pos(e));
+    convert_text();
 });
 
 // マウス移動
