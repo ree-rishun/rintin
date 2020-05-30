@@ -18,7 +18,28 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
+}
+
+#selectarea {
+  width: 100%;
   height: 100%;
+}
+
+#display {
+  border: solid 2px #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+#drowing {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
