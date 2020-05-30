@@ -1,0 +1,24 @@
+nav {
+  position: fixed;
+  z-index: 200;
+  width: 15vw;
+  height: 15vw;
+  top: 0;
+  left: 85vw;
+  background-image: url("/images/icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15vw;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+video {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
