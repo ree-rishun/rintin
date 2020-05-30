@@ -1,4 +1,3 @@
-let smartphone = false;
 const medias = {
     audio: false,
     video: {
