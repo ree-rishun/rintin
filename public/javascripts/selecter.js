@@ -1,6 +1,6 @@
 let width_prev = 0;
 let height_prev = 0;
-var repeat;
+let repeat;
 
 function get_image(ctx, video, x_point, y_point, width, height) {
     // キャンバスを初期化
@@ -12,8 +12,5 @@ function get_image(ctx, video, x_point, y_point, width, height) {
     // 画像生成
     let imgData = canvas.toDataURL("image/png");
     convert_text(imgData);
-    repeat = setInterval(function() {
-        qrcode_reader();
-    }, 500);
 
 }

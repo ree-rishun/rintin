@@ -1,3 +1,5 @@
+$navicon-size:15vw;
+
 nav{
   position: fixed;
   z-index: 200;
@@ -10,6 +12,7 @@ nav{
   background-repeat: no-repeat;
   background-size: $navicon-size;
 }
+
 
 #video{
   position: fixed;

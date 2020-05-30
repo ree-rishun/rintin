@@ -20,7 +20,7 @@ function writeQr(canvas, data){
             margin: 2,
             scale: document.body.clientWidth / 250,
             color: {
-                dark: '#333333',  // Blue dots
+                dark: '#000',  // Blue dots
                 light: '#0000' // Transparent background
             }
         }, (err, tg) => !err ? res(tg) : rej(err));

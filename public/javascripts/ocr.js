@@ -10,4 +10,7 @@ function convert_text(url) {
             console.log(result);
             print.innerHTML = result.text;
         });
+    repeat = setInterval(function() {
+        qrcode_reader();
+    }, 500);
 }
