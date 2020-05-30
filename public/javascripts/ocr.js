@@ -1,21 +1,12 @@
-const medias = {
-    audio: false,
-    video: {
-        facingMode: {
-            exact: "environment"
-        }
-    }
-};
-const video = document.getElementById("video");
-const promise = navigator.mediaDevices.getUserMedia(medias);
-
-promise.then(successCallback)
-    .catch(errorCallback);
-
-function successCallback(stream) {
-    video.srcObject = stream;
-};
-
-function errorCallback(err) {
-    alert(err);
-};
+function convert_text() {
+    const url = document.getElementById( "select_area" ).toDataURL("image/png");
+    Tesseract
+        .recognize(url, {
+            lang: 'jpn'
+        })
+        .then(function(result) {
+            console.log(result);
+            let msg = document.getElementById( "select_square" );
+            msg.innerHTML = result.text;
+        });
+}

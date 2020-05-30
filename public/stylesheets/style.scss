@@ -1,7 +1,7 @@
 $navicon-size:15vw;
 
 body{
-
+  background: #eeeeee;
 }
 
 nav{
@@ -15,7 +15,6 @@ nav{
   background-position: center;
   background-repeat: no-repeat;
   background-size: $navicon-size;
-  background-color: rgba(0,0,0,.3);
 }
 ul{
   position: fixed;

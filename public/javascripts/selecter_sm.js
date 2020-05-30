@@ -25,6 +25,7 @@ target.addEventListener('touchmove', function(e) {
     if(dragging){
         draw(pos_sm(e));
     }
+    convert_text();
 });
 
 

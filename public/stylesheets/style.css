@@ -1,3 +1,7 @@
+body {
+  background: #eeeeee;
+}
+
 nav {
   position: fixed;
   z-index: 200;
@@ -9,7 +13,6 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 15vw;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 ul {
