@@ -19,7 +19,7 @@ nav{
 }
 #video{
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -28,7 +28,7 @@ nav{
 
 #canvas_area{
   position: fixed;
-  z-index: 1;
+  z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
@@ -36,7 +36,7 @@ nav{
 }
 
 #display{
-  border: solid 2px #ffffff;
+  border: solid 2px #000;
   border-radius: 5px;
   position: absolute;
   width: 100%;
