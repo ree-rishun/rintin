@@ -77,29 +77,3 @@ target.addEventListener('mousemove', function(e) {
     }
 });
 
-
-// スマホ版
-// マウスダウン
-target.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-    square.style.display = "inline-block";
-    dragging = true;
-    start_pos = pos(e);
-    console.log("start_pos: " + start_pos);
-});
-
-// マウスアップ
-target.addEventListener('touchend', function(e) {
-    dragging = false;
-    console.log("マウスアップ" + pos(e));
-});
-
-// マウス移動
-target.addEventListener('touchmove', function(e) {
-    if(dragging){
-        //console.log("マウス移動中" + pos(e));
-        draw(pos(e));
-    }
-});
-
-
