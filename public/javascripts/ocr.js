@@ -2,7 +2,7 @@ window.onload = () => {
     const video  = document.querySelector("#camera");
     const canvas = document.querySelector("#picture");
 
-    
+
     /** カメラ設定 */
     const constraints = {
         audio: false,
