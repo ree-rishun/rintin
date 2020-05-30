@@ -59,6 +59,7 @@ let message;
 ctx.strokeStyle = "blue";
 ctx.lineWidth = 1;
 
+// PC版
 // マウスダウン
 target.addEventListener('mousedown', function(e) {
     dragging = true;
@@ -74,6 +75,29 @@ target.addEventListener('mouseup', function(e) {
 
 // マウス移動
 target.addEventListener('mousemove', function(e) {
+    if(dragging){
+        //console.log("マウス移動中" + pos(e));
+        draw(pos(e));
+    }
+});
+
+
+// スマホ版
+// マウスダウン
+target.addEventListener('touchstart', function(e) {
+    dragging = true;
+    start_pos = pos(e);
+    console.log("start_pos: " + start_pos);
+});
+
+// マウスアップ
+target.addEventListener('touchend', function(e) {
+    dragging = false;
+    console.log("マウスアップ" + pos(e));
+});
+
+// マウス移動
+target.addEventListener('touchmove', function(e) {
     if(dragging){
         //console.log("マウス移動中" + pos(e));
         draw(pos(e));
