@@ -1,7 +1,16 @@
 extends layout
 
 block content
-  nav
+  nav#nav_button
+  div#menu
+    p
+      | select language
+    select#language
+      option(value='jpn')
+        | Japanese
+      option(value='eng')
+        | English
+
   video#video(autoplay playsinline)
   canvas#video_copy
   div#select_square
