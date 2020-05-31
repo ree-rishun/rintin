@@ -9,7 +9,7 @@ function convert_text(url) {
         })
         .then(function(result) {
             console.log(result);
-            print.value = result.text;
+            print.innerText = result.text;
         });
     repeat = setInterval(function() {
         qrcode_reader();
@@ -37,38 +37,7 @@ let copytext = document.getElementById('select_square');
 function toutch_controller(mode) {
     switch (mode) {
         case "copy":
-            // コピー対象の要素を取得
-            // 使用端末を区別し、iOSとandroidで処理を分ける。
-            if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
-                // iphone用のコピー設定
-                try {
-                    // iOSの場合、readOnlyではコピーできない(たぶん)ので、
-                    // readOnlyを外す
-                    copytext.readOnly = false;
-                    // ここから下が、iOS用でしか機能しない関数------
-                    let range = document.createRange();
-                    range.selectNode(copytext);
-                    window.getSelection().addRange(range);
-                    // ------------------------------------------
-                    document.execCommand("copy");
-                    // readOnlyに戻す
-                    copytext.readOnly = true;
-                    alert("コピーしました。");
-                } catch (e) {
-                    // エラーになった場合も、readOnlyに戻す
-                    copytext.readOnly = true;
-                    alert("このブラウザでは対応していません。");
-                }
-            } else {
-                // iphone以外のコピー設定
-                try {
-                    copytext.select();
-                    document.execCommand('copy');
-                    alert("コピーしました。");
-                } catch (e) {
-                    alert("このブラウザでは対応していません。");
-                }
-            }
+
             break;
         case "retry":
             clearInterval(repeat);

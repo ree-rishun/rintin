@@ -15,7 +15,7 @@ function qrcode_reader(){
         socket.emit('qruuid',
             {
                 'uuid' : code.data,
-                'text' : print.value
+                'text' : print.innerText
             }
         );
     }
