@@ -26,3 +26,10 @@ function writeQr(canvas, data){
         }, (err, tg) => !err ? res(tg) : rej(err));
     });
 }
+
+socket.on('qruuid',function(content){
+        console.log(content.text);
+        if(content.uuid == pageID){
+            document.execCommand('insertText', false, content.text);
+        }
+});
