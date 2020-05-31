@@ -1,11 +1,11 @@
 const createError = require('http-errors');
 const express = require('express');
 const app = express();
-var port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // socket.io
-var http = require('http').createServer(app).listen(port);
-var io = require('socket.io').listen(http);
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -52,6 +52,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+http.listen(PORT, function(){
+  console.log('server listening. Port:' + PORT);
 });
 
 module.exports = app;
