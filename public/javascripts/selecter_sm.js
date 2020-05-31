@@ -51,7 +51,7 @@ function pos_sm(e) {
 // マウスダウン
 target.addEventListener('touchstart', function(e) {
     clearInterval(repeat);
-    print.innerHTML ="";
+    print.value ="";
     e.preventDefault();
     dragging = true;
     document.getElementById("controller").style.display = "none";

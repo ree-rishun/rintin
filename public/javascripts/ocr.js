@@ -37,7 +37,6 @@ let copytext = document.getElementById('select_square');
 function toutch_controller(mode) {
     switch (mode) {
         case "copy":
-            copytext.value = print.innerHTML;
             // コピー対象の要素を取得
             // 使用端末を区別し、iOSとandroidで処理を分ける。
             if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {

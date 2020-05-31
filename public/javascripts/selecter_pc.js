@@ -17,7 +17,7 @@ function pos(e) {
 // マウスダウン
 target.addEventListener('mousedown', function(e) {
     clearInterval(repeat);
-    print.innerHTML ="";
+    print.value ="";
     dragging = true;
     document.getElementById("controller").style.display = "none";
     square.style.display = "inline-block";
