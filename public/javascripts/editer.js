@@ -6,6 +6,15 @@ $(function() {
     $("#editer").linedtextarea();
 });
 
+// 文字列の挿入
+socket.on('qruuid',function(content){
+    console.log(content.text);
+    if(content.uuid == pageID){
+        document.getElementById("editer").focus();
+        document.execCommand('insertText', false, content.text);
+    }
+});
+
 // 行数カウント
 document.getElementById('editer').addEventListener('change',function() {
     let num = document.getElementById("editer").indexOf("\n");

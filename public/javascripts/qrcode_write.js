@@ -11,6 +11,7 @@ function getUniqueStr(myStrong){
 window.onload=function () {
     pageID = getUniqueStr();
     writeQr(document.getElementById("qrcode"), pageID);
+    document.getElementById("editer").focus();
 }
 
 // QRコード生成
@@ -26,10 +27,3 @@ function writeQr(canvas, data){
         }, (err, tg) => !err ? res(tg) : rej(err));
     });
 }
-
-socket.on('qruuid',function(content){
-        console.log(content.text);
-        if(content.uuid == pageID){
-            document.execCommand('insertText', false, content.text);
-        }
-});

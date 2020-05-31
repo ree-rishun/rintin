@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a25fe862-e7b5-4828-878b-bda26eb7c898" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/javascripts/jquery-linedtextarea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stylesheets/jquery-linedtextarea.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/editer.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/editer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/javascripts/qrcode_write.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/qrcode_write.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascripts/selecter.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascripts/selecter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/editer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/editer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/editer.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/editer.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/editer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/editer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/editer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/editer.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590810323156</updated>
       <workItem from="1590810325985" duration="53822000" />
-      <workItem from="1590886394024" duration="9231000" />
+      <workItem from="1590886394024" duration="9785000" />
     </task>
     <servers />
   </component>
