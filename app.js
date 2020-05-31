@@ -1,11 +1,9 @@
 const createError = require('http-errors');
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 8080;
-
-// socket.io
-const http = require('http').Server(app);
+var express = require('express');
+var app = express();
+var http = require('http').Server(app);
 const io = require('socket.io')(http);
+const PORT = process.env.PORT || 5000;
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
