@@ -1,9 +1,10 @@
 const createError = require('http-errors');
 const express = require('express');
 const app = express();
+var port = process.env.PORT || 8080;
 
 // socket.io
-var http = require('http').createServer(app);
+var http = require('http').createServer(app).listen(port);
 var io = require('socket.io').listen(http);
 
 const path = require('path');
@@ -54,5 +55,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-http.listen(8080);
