@@ -12,5 +12,4 @@ function get_image(ctx, video, x_point, y_point, width, height) {
     // 画像生成
     let imgData = canvas.toDataURL("image/png");
     convert_text(imgData);
-
 }

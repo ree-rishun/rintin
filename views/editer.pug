@@ -3,11 +3,13 @@ extends layout
 block content
     nav
         canvas#qrcode
-    textarea#editer
+    div#editer_area
+        textarea#editer
+    div#ocr_qrcode
 
     // scripts
     script(src="https://cdn.jsdelivr.net/npm/qrcode@latest/build/qrcode.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js")
+    script(src="/javascripts/editer.js")
     script(src="/javascripts/socket.js")
     script(src="/javascripts/qrcode_write.js")
     script

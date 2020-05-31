@@ -1,20 +1,3 @@
-#editer{
-  position: fixed;
-  z-index: 50;
-  top: 0;
-  left: 11%;
-  width: 87%;
-  min-height: 100vh;
-  background: none;
-  border: none;
-  resize: none;
-  color: white;
-  font-size: 1.2em;
-  line-height: 1.9em;
-}
-#editer:focus {
-  outline: none;
-}
 nav{
   position: fixed;
   z-index: 100;
@@ -22,12 +5,50 @@ nav{
   left: 0;
   width: 10%;
   height: 100vh;
-  background-color: #666666;
+  background-color: #111;
+  background-image: url("/images/logo.png");
+  background-position: center 1vw;
+  background-repeat: no-repeat;
+  background-size: 8vw;
 }
+
 #qrcode{
   position: fixed;
   z-index: 101;
   left: 0;
   bottom: 0;
   margin: auto;
+}
+#editer_area{
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 10%;
+  width: 90%;
+  min-height: 100vh;
+  #editer{
+    width: 100%;
+    min-height: 100vh;
+    background: none;
+    border: none;
+    resize: none;
+    color: white;
+    font-size: 0.9em;
+    line-height: 1.9em;
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: auto;
+  }
+  #editer:focus {
+    outline: none;
+  }
+}
+
+
+.linedwrap {
+  border: none;
+  padding: 0;
+}
+.linedwrap .codelines .lineno {
+  user-select: none;
 }

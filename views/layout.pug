@@ -7,12 +7,20 @@ html(lang="ja")
     meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
 
-    // style sheet
+    //style sheet
+    link(rel="stylesheet" href="/stylesheets/reset.css")
     link(rel="stylesheet" href="/stylesheets/style.css")
-    link(rel="stylesheet" href="/stylesheets/" + title + ".css")
+    link(rel="stylesheet" href="/stylesheets/jquery-linedtextarea.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap")
+    link(rel="stylesheet" href="/stylesheets/" + title + ".css")
+    link(rel="stylesheet" href="/stylesheets/" + title + ".css")
 
     // scripts
     script(src="/socket.io/socket.io.js")
+    script(
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous")
+    script(src="/javascripts/jquery-linedtextarea.js")
   body
     block content
