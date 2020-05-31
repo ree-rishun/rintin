@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 const io = require('socket.io')(http);
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 5000;
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -52,8 +52,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-http.listen(PORT, function(){
-  console.log('server listening. Port:' + PORT);
-});
+// http.listen(PORT, function(){console.log('server listening. Port:' + PORT);});
 
 module.exports = app;
