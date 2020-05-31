@@ -32,29 +32,40 @@ nav_button.addEventListener('touchend', function(e) {
     nav_display = !nav_display;
 });
 
-let hide_textbox = document.getElementById("hide_textbox");
+let copytext = document.getElementById('hide_textbox');
 
 function toutch_controller(mode) {
     switch (mode) {
         case "copy":
-            hide_textbox.value = print.innerHTML;
+            copytext.value = print.innerHTML;
+            // コピー対象の要素を取得
+            // 使用端末を区別し、iOSとandroidで処理を分ける。
             if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
                 // iphone用のコピー設定
                 try {
+                    // iOSの場合、readOnlyではコピーできない(たぶん)ので、
+                    // readOnlyを外す
+                    copytext.readOnly = false;
+                    // ここから下が、iOS用でしか機能しない関数------
                     let range = document.createRange();
-                    range.selectNode(hide_textbox);
+                    range.selectNode(copytext);
                     window.getSelection().addRange(range);
+                    // ------------------------------------------
                     document.execCommand("copy");
-                    alert("コピーしました。");
+                    // readOnlyに戻す
+                    copytext.readOnly = true;
+                    alert("URLをコピーしました。");
                 } catch (e) {
+                    // エラーになった場合も、readOnlyに戻す
+                    copytext.readOnly = true;
                     alert("このブラウザでは対応していません。");
                 }
             } else {
                 // iphone以外のコピー設定
                 try {
-                    hide_textbox.select();
+                    copytext.select();
                     document.execCommand('copy');
-                    alert("コピーしました。");
+                    alert("URLをコピーしました。");
                 } catch (e) {
                     alert("このブラウザでは対応していません。");
                 }

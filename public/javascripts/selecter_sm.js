@@ -54,6 +54,7 @@ target.addEventListener('touchstart', function(e) {
     print.innerHTML ="";
     e.preventDefault();
     dragging = true;
+    document.getElementById("controller").style.display = "none";
     square.style.display = "inline-block";
     draw(pos_sm(e));
     start_pos = pos_sm(e);

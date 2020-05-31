@@ -19,6 +19,7 @@ target.addEventListener('mousedown', function(e) {
     clearInterval(repeat);
     print.innerHTML ="";
     dragging = true;
+    document.getElementById("controller").style.display = "none";
     square.style.display = "inline-block";
     start_pos = pos(e);
 });
