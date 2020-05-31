@@ -88,6 +88,9 @@ $controller_icon:25px;
 
 #select_square{
   position: fixed;
+  padding: 0;
+  outline: none;
+  background: none;
   display: none;
   z-index: 25;
   top: 0;

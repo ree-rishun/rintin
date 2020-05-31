@@ -32,7 +32,7 @@ nav_button.addEventListener('touchend', function(e) {
     nav_display = !nav_display;
 });
 
-let copytext = document.getElementById('hide_textbox');
+let copytext = document.getElementById('select_square');
 
 function toutch_controller(mode) {
     switch (mode) {
@@ -54,7 +54,7 @@ function toutch_controller(mode) {
                     document.execCommand("copy");
                     // readOnlyに戻す
                     copytext.readOnly = true;
-                    alert("URLをコピーしました。");
+                    alert("コピーしました。");
                 } catch (e) {
                     // エラーになった場合も、readOnlyに戻す
                     copytext.readOnly = true;
@@ -65,7 +65,7 @@ function toutch_controller(mode) {
                 try {
                     copytext.select();
                     document.execCommand('copy');
-                    alert("URLをコピーしました。");
+                    alert("コピーしました。");
                 } catch (e) {
                     alert("このブラウザでは対応していません。");
                 }
