@@ -11,12 +11,12 @@ function qrcode_reader(){
     console.log("code :" + code);
     // QRコード発見時
     if( code ){ // 結果を表示
+        clearInterval(repeat);
         socket.emit('qruuid',
             {
                 'uuid' : code.data,
                 'text' : print.innerHTML
             }
         );
-        clearInterval(repeat);
     }
 }

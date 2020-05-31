@@ -53,14 +53,18 @@ target.addEventListener('touchstart', function(e) {
     clearInterval(repeat);
     print.innerHTML ="";
     e.preventDefault();
-    square.style.display = "inline-block";
     dragging = true;
+    square.style.display = "inline-block";
+    draw(pos_sm(e));
     start_pos = pos_sm(e);
 });
 
 // マウスアップ
 target.addEventListener('touchend', function(e) {
     dragging = false;
+    document.getElementById("controller").style.marginLeft = String(x_point + width - 100) + "px";
+    document.getElementById("controller").style.marginTop = String(y_point + height + 10) + "px";
+    document.getElementById("controller").style.display = "inline-block";
     get_image(ctx,video, x_point, y_point, width, height);
 });
 

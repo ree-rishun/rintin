@@ -18,14 +18,17 @@ function pos(e) {
 target.addEventListener('mousedown', function(e) {
     clearInterval(repeat);
     print.innerHTML ="";
-    square.style.display = "inline-block";
     dragging = true;
+    square.style.display = "inline-block";
     start_pos = pos(e);
 });
 
 // マウスアップ
 target.addEventListener('mouseup', function(e) {
     dragging = false;
+    document.getElementById("controller").style.marginLeft = String(x_point + width - 100) + "px";
+    document.getElementById("controller").style.marginTop = String(y_point + height + 10) + "px";
+    document.getElementById("controller").style.display = "inline-block";
     get_image(ctx,video, x_point, y_point, width, height);
 });
 

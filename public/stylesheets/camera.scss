@@ -1,4 +1,4 @@
-$navicon-size:15vw;
+$navicon-size:20vw;
 
 nav{
   position: fixed;
@@ -46,6 +46,35 @@ nav{
   left: 0;
   width: auto;
   height: auto;
+}
+
+$controller_icon:25px;
+#controller{
+  position: fixed;
+  z-index: 100;
+  display: none;
+  height: $controller_icon;
+  width: 105px;
+  top: 0;
+  left: 0;
+  span{
+    display: inline-block;
+    margin: 0 0 0 10px;
+    height: $controller_icon;
+    width: $controller_icon;
+    background-repeat: no-repeat;
+    background-size: $controller_icon;
+    background-position: center;
+  }
+  #copy_button{
+    background-image: url("/images/copy.png");
+  }
+  #reset_button{
+    background-image: url("/images/reload.png");
+  }
+  #delete_button{
+    background-image: url("/images/trash.png");
+  }
 }
 
 #select_area{

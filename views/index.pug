@@ -14,8 +14,14 @@ block content
   video#video(autoplay playsinline)
   canvas#video_copy
   div#select_square
+  div#controller
+    span#copy_button(onclick="toutch_controller('copy')")
+    span#reset_button(onclick="toutch_controller('retry')")
+    span#delete_button(onclick="toutch_controller('delete')")
   canvas#select_area
     | This browser does not support the HTML5 Canvas element.
+
+  input#hide_textbox(type="text")
 
   // scripts
   script(src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.7/dist/tesseract.js")
