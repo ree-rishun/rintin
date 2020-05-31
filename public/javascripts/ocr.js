@@ -9,7 +9,7 @@ function convert_text(url) {
         })
         .then(function(result) {
             console.log(result);
-            print.innerHTML = result.text;
+            print.value = result.text;
         });
     repeat = setInterval(function() {
         qrcode_reader();
